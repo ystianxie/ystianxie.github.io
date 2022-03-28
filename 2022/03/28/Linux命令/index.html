@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="adb命令, 海布客">
+    <meta name="keywords" content="Linux命令, 海布客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>adb命令 | 海布客</title>
+    <title>Linux命令 | 海布客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -262,12 +262,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/nxl.jpeg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">adb命令</h1>
+                    <h1 class="description center-align post-title">Linux命令</h1>
                 </div>
             </div>
         </div>
@@ -383,27 +383,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/adb/">
-                                <span class="chip bg-color">adb</span>
-                            </a>
-                        
-                            <a href="/tags/Android/">
-                                <span class="chip bg-color">Android</span>
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Android/" class="post-category">
-                                Android
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -412,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-22
+                    2022-03-28
                 </div>
                 
 
@@ -426,7 +413,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    312
+                    102
                 </div>
                 
 
@@ -448,100 +435,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Adb常用命令"><a href="#Adb常用命令" class="headerlink" title="Adb常用命令"></a>Adb常用命令</h1><h2 id="1-获取手机状态"><a href="#1-获取手机状态" class="headerlink" title="1. 获取手机状态"></a>1. 获取手机状态</h2><ul>
-<li><p>获取锁屏状态</p>
-<pre class=" language-shell"><code class="language-shell">adb shell dumpsys window policy
+                <h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><h2 id="一-运行"><a href="#一-运行" class="headerlink" title="一.运行"></a>一.运行</h2><h5 id="1-后台运行"><a href="#1-后台运行" class="headerlink" title="1.后台运行"></a>1.后台运行</h5><pre class=" language-shell"><code class="language-shell">nohup *** &
+nohup python3 /var/py_project/cctv/api/main.py >/dev/null 2>&1 &
+nohup python3 /var/py_project/cctv/api/main.py >/data/cctv_log/nohup6-1.out 2>&1 &
 </code></pre>
-<ol>
-<li>关闭状态： <ul>
-<li>dreaming=true </li>
-<li>screenState=SCREEN_STATE_OFF </li>
-<li>interactiveState=INTERACTIVE_STATE_SLEEP</li>
-</ul>
-</li>
-<li>锁屏状态： <ul>
-<li>dreaming=false</li>
-<li>screenState=SCREEN_STATE_ON</li>
-<li>interactiveState=INTERACTIVE_STATE_AWAKE</li>
-</ul>
-</li>
-<li>解锁状态：<ul>
-<li>showing=false</li>
-<li>mIsShowing=false</li>
-<li>mInputRestricted=false</li>
-<li>dreaming=false</li>
-<li>screenState=SCREEN_STATE_ON</li>
-<li>interactiveState=INTERACTIVE_STATE_AWAKE</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="2-有用的命令"><a href="#2-有用的命令" class="headerlink" title="2. 有用的命令"></a>2. 有用的命令</h2><ul>
-<li><p>input</p>
-<pre class=" language-shell"><code class="language-shell">adb shell input keyevent 26
-adb shell input keyevent 82
-adb shell input keyevent 223
-adb shell input keyevent 224
+<h5 id="2-将程序后台运行-如果没有‘-amp-’"><a href="#2-将程序后台运行-如果没有‘-amp-’" class="headerlink" title="2.将程序后台运行(如果没有‘&amp;’)"></a>2.将程序后台运行(如果没有‘&amp;’)</h5><h6 id="1-让程序挂起-：ctrl-z"><a href="#1-让程序挂起-：ctrl-z" class="headerlink" title="1.让程序挂起 ：ctrl+z"></a>1.让程序挂起 ：ctrl+z</h6><h6 id="2-查看任务列表"><a href="#2-查看任务列表" class="headerlink" title="2.查看任务列表"></a>2.查看任务列表</h6><pre class=" language-shell"><code class="language-shell">jobs
 </code></pre>
-<p><em>1. keyevent: 26 代表电源键 power</em><br><em>2. keyevent: 82 代表菜单键 尝试解锁</em></p>
-<p><em>3. keyevent: 223 代表熄灭屏幕 (模拟电源键)</em></p>
-<p><em>4. keyevent: 224 代表点亮屏幕 (模拟电源键)</em></p>
-</li>
-<li><p>发送广播关闭USB</p>
-<pre class=" language-shell"><code class="language-shell">adb shell am broadcast -a android.hardware.usb.action.USB_STATE --ez connected "false"
+<h6 id="3-后台运行任务"><a href="#3-后台运行任务" class="headerlink" title="3.后台运行任务"></a>3.后台运行任务</h6><pre class=" language-shell"><code class="language-shell">bg 1
 </code></pre>
-</li>
-<li><p>关闭gyroscope(陀螺仪)</p>
-<pre class=" language-shell"><code class="language-shell">adb shell echo 0 > /sys/class/sensors/bmg160/enable
+<h5 id="3-忽略信号"><a href="#3-忽略信号" class="headerlink" title="3.  忽略信号"></a>3.  忽略信号</h5><pre class=" language-shell"><code class="language-shell">disown -h %1
 </code></pre>
-<p><em>硬件相关，可能有变动</em></p>
-</li>
-<li><p>查看Notification：“找出状态栏广告的主人”</p>
-<pre class=" language-shell"><code class="language-shell">adb shell dumpsys statusbar
+<h5 id="4-查看运行中的程序"><a href="#4-查看运行中的程序" class="headerlink" title="4.查看运行中的程序"></a>4.查看运行中的程序</h5><h6 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h6><pre class=" language-shell"><code class="language-shell">ps
 </code></pre>
-</li>
-<li><p>模拟启动activity</p>
-<pre class=" language-shell"><code class="language-shell">adb shell am start  <INTENT> : start an Activity
+<h6 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h6><pre class=" language-shell"><code class="language-shell">top
 </code></pre>
-</li>
-<li><p>开关WiFi</p>
-<pre class=" language-shell"><code class="language-shell">svc wifi [enable|disable]
+<h6 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h6><pre class=" language-shell"><code class="language-shell">ps -ef|grep ***.py
 </code></pre>
-</li>
-<li><p>开关移动网络</p>
-<pre class=" language-shell"><code class="language-shell">svc data [enable|disable]
-</code></pre>
-</li>
-<li><p>手机重启</p>
-<pre class=" language-shell"><code class="language-shell">svc power reboot [reason]
-//Perform a runtime shutdown and reboot device with specified reason.
-</code></pre>
-</li>
-<li><p>手机关机</p>
-<pre class=" language-shell"><code class="language-shell">svc power shutdown
-</code></pre>
-</li>
-<li><p>查看apk安装列表</p>
-<pre class=" language-shell"><code class="language-shell">adb shell pm list packages [-s|-3]
-</code></pre>
-<p><em>-s : 系统应用</em></p>
-<p><em>-3 : 第三方应用</em></p>
-</li>
-<li><p>dump input</p>
-<pre class=" language-shell"><code class="language-shell">adb shell dumpsys input
-</code></pre>
-</li>
-<li><p>activity 简要信息 </p>
-</li>
-<li><pre class=" language-shell"><code class="language-shell">adb shell dumpsys activity top | grep ACTIVITY
-</code></pre>
-</li>
-<li><p>查看activity详细信息，如显示大小，布局等等</p>
-<pre class=" language-shell"><code class="language-shell">adb shell dumpsys activity a
-</code></pre>
-</li>
-</ul>
 
                 
             </div>
@@ -568,7 +477,7 @@ adb shell input keyevent 224
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ystianxie.github.io/2022/03/22/adb%E5%91%BD%E4%BB%A4/">http://ystianxie.github.io/2022/03/22/adb%E5%91%BD%E4%BB%A4/</a>
+                    <a href="http://ystianxie.github.io/2022/03/28/Linux%E5%91%BD%E4%BB%A4/">http://ystianxie.github.io/2022/03/28/Linux%E5%91%BD%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -606,12 +515,8 @@ adb shell input keyevent 224
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/adb/">
-                                    <span class="chip bg-color">adb</span>
-                                </a>
-                            
-                                <a href="/tags/Android/">
-                                    <span class="chip bg-color">Android</span>
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -655,9 +560,10 @@ adb shell input keyevent 224
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/28/Linux%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
@@ -675,9 +581,9 @@ adb shell input keyevent 224
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -686,6 +592,7 @@ adb shell input keyevent 224
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -704,19 +611,18 @@ adb shell input keyevent 224
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/22/hello-world/">
+                <a href="/2022/03/22/adb%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
+                        <img src="/images/nxl.jpeg" class="responsive-img" alt="adb命令">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">adb命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            一些不常用的adb命令
                         
                     </div>
                     <div class="publish-info">
@@ -725,11 +631,27 @@ adb shell input keyevent 224
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            starsXu
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Android/" class="post-category">
+                                    Android
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/adb/">
+                        <span class="chip bg-color">adb</span>
+                    </a>
+                    
+                    <a href="/tags/Android/">
+                        <span class="chip bg-color">Android</span>
+                    </a>
+                    
                 </div>
                 
             </div>
